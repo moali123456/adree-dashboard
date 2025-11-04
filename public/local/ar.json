@@ -1,0 +1,34 @@
+{
+  "login_page": "تسجيل الدخول",
+  "pages_titles": {
+    "dashboard_page": "الرئيسية",
+    "products": "المنتجات",
+    "": ""
+  },
+  "products": "المنتجات",
+  "product": "منتج",
+  "products_sub_title": "تتبع المنتجات",
+  "add_product": "اضافة منتج",
+  "previous": "السابق",
+  "next": "التالي",
+  "product_name": "اسم المنتج",
+  "brand": "الماركة",
+  "category": "القسم",
+  "price": "السعر",
+  "stock": "المخزون",
+  "rating": "التقييم",
+  "search_products": "البحث عن منتج",
+  "actions": "اجراءات",
+  "delete_item": "حذف عنصر",
+  "delete_item_description": "هل انت متاكد انك تريح حذف",
+  "cancel": "الغاء",
+  "delete": "حذف",
+  "total_products": "كل المنتجات",
+  "total_stock": "كل المخزون",
+  "average_price": "متوسط السعر",
+  "average_rating": "متوسط التقييمات",
+  "category_distribution": "توزيع الفئات",
+  "price_distribution": "توزيع الاسعار",
+  "dashboard": "الرئيسية"
+}
+

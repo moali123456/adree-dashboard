@@ -1,0 +1,33 @@
+{
+  "login_page": "Login Page",
+  "pages_titles": {
+    "dashboard_page": "Dashboard",
+    "products": "Products",
+    "": ""
+  },
+  "products": "Products",
+  "product": "Product",
+  "products_sub_title": "Keep track of Products",
+  "add_product": "Add product",
+  "previous": "Previous",
+  "next": "Next",
+  "product_name": "Product name",
+  "brand": "Brand",
+  "category": "Category",
+  "price": "Price",
+  "stock": "Stock",
+  "rating": "Rating",
+  "actions": "Actions",
+  "search_products": "Search products",
+  "delete_item": "Delete Item",
+  "delete_item_description": "Are you sure you want to delete",
+  "cancel": "cancel",
+  "delete": "Delete",
+  "total_products": "Total Products",
+  "total_stock": "Total Stock",
+  "average_price": "Average Price",
+  "average_rating": "Average Rating",
+  "category_distribution": "Category Distribution",
+  "price_distribution": "Price Distribution",
+  "dashboard": "Dashboard"
+}
