@@ -1,17 +1,26 @@
-import { logout } from "../../../redux/authSlice";
-import { useDispatch } from "react-redux";
+import type { ReactNode } from "react";
 
-const LogOut = ({ logoutContent }) => {
-  const dispatch = useDispatch();
+interface LogoutContent {
+  photo?: ReactNode;
+  text?: string;
+  textStyle?: string;
+}
+
+interface LogOutProps {
+  logoutContent: LogoutContent;
+}
+
+const LogOut = ({ logoutContent }: LogOutProps) => {
+  //const dispatch = useDispatch();
 
   const logoutBtn = () => {
-    dispatch(logout());
+    //dispatch(logout());
   };
 
   return (
     <>
       <span className="cursor-pointer flex gap-2 items-center" onClick={logoutBtn}>
-        {logoutContent?.photo} <span className={logoutContent.textStyle}>{logoutContent?.text}</span>
+        {logoutContent?.photo} <span className={logoutContent?.textStyle}>{logoutContent?.text}</span>
       </span>
     </>
   );

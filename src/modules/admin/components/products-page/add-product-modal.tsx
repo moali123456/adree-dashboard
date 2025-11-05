@@ -39,7 +39,7 @@ export function AddProductModal({
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid, isSubmitting },
+    formState: { errors, isSubmitting },
     reset,
     watch,
   } = useForm<AddProductFormData>({

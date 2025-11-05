@@ -6,7 +6,7 @@ import countryFlagEn from "../../../assets/images/png/en.png";
 import { showLoader, hideLoader } from "../../../redux/loaderSlice";
 import { useDispatch } from "react-redux";
 
-const LanguageSwitch = ({ languageText }) => {
+const LanguageSwitch = () => {
   const { i18n } = useTranslation();
   document.documentElement.lang = i18n.language;
 
@@ -37,7 +37,7 @@ const LanguageSwitch = ({ languageText }) => {
               i18n.changeLanguage("ar");
           }}
         >
-          {languageText} <img src={countryFlagAr} alt="logo" className="size-9 rounded-md object-cover" />
+          <img src={countryFlagAr} alt="logo" className="size-9 rounded-md object-cover" />
         </span>
       )}
 
@@ -52,7 +52,7 @@ const LanguageSwitch = ({ languageText }) => {
               i18n.changeLanguage("en");
           }}
         >
-          {languageText} <img src={countryFlagEn} alt="logo" className="size-9 rounded-md object-cover" />
+          <img src={countryFlagEn} alt="logo" className="size-9 rounded-md object-cover" />
         </span>
       )}
     </div>

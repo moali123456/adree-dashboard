@@ -1,9 +1,12 @@
 import { useRef, useCallback, useEffect } from 'react';
 
-export function useDebounce(callback, delay) {
-  const timeoutRef = useRef(null);
+export function useDebounce<Args extends unknown[]>(
+  callback: (...args: Args) => void,
+  delay: number
+): (...args: Args) => void {
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const debouncedCallback = useCallback((...args) => {
+  const debouncedCallback = useCallback((...args: Args) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }

@@ -25,7 +25,7 @@ const TablePagination: React.FC<TablePaginationProps> = ({
   nextText = "Next",
   previousText = "Previous",
 }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   // Generate page numbers to display

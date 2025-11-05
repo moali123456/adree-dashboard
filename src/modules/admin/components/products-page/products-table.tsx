@@ -63,11 +63,11 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
       render: (value: number) => value.toFixed(1),
     },
     {
-      key: "id" as keyof Product, // Use existing key, we'll override with render
+      key: "id" as keyof Product,
       label: t("actions") || "Actions",
       align: "center" as const,
       headerAlign: "center" as const,
-      render: (value: any, row: Product) => (
+      render: (_value: unknown, row: Product) => (
         <TableActions
           itemId={row.id.toString()}
           itemName={row.title}

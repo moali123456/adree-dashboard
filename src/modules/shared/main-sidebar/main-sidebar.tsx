@@ -38,12 +38,9 @@ function MainSidebar({ ...props }) {
         icon: Users,
         items: [
           {
-            title: (
-              <span className="flex gap-1">
-                <ShieldUser className="size-4" /> {t("admins")}
-              </span>
-            ),
+            title: t("admins"), // Use string instead of JSX
             url: "#",
+            icon: ShieldUser, // Add icon as separate property
           },
           {
             title: t("customers"),

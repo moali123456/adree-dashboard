@@ -70,4 +70,22 @@ export default defineConfig([
     },
   },
 ])
+
+Project Setup Instructions
+
+This project is a React + TypeScript + Vite application that includes a dashboard with charts and a product management page supporting full CRUD (Create, Read, Update, Delete) operations.
+
+It uses the following main libraries and tools:
+
+React Router – for page navigation and route handling
+
+Axios – for making API requests
+
+Tailwind CSS – for responsive and modern styling
+
+Redux Toolkit – for efficient global state management
+
+shadcn/ui – for accessible, customizable UI components
+
+demo video: 
 ```

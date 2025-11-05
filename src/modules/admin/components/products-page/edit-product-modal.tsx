@@ -62,8 +62,7 @@ export function EditProductModal({
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
-    reset,
+    formState: { errors },
     watch,
     setValue,
   } = useForm<EditProductFormData>({

@@ -20,7 +20,6 @@ interface TableActionsProps {
 
 export function TableActions({
   itemId,
-  itemName,
   onEdit,
   onDelete,
   editLabel = "Edit",

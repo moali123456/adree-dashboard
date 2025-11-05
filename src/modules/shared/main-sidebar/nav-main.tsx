@@ -22,8 +22,27 @@ import {
   TooltipTrigger,
 } from "../../../components/ui/tooltip";
 import { useTranslation } from "react-i18next";
+import type { LucideIcon } from "lucide-react";
 
-function NavMain({ items }) {
+interface NavItem {
+  title: string;
+  url?: string;
+  icon?: LucideIcon;
+  isActive?: boolean;
+  items?: NavSubItem[];
+}
+
+interface NavSubItem {
+  title: string;
+  url: string;
+  icon?: LucideIcon;
+}
+
+interface NavMainProps {
+  items: NavItem[];
+}
+
+function NavMain({ items }: NavMainProps) {
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
   const { state } = useSidebar();
@@ -42,7 +61,7 @@ function NavMain({ items }) {
                   <Tooltip key={item.title}>
                     <TooltipTrigger asChild>
                       <SidebarMenuButton
-                        tooltip={null}
+                        tooltip={undefined} // Changed from null to undefined
                         className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! hover:text-white"
                       >
                         {Icon && <Icon />}
@@ -63,7 +82,7 @@ function NavMain({ items }) {
                       side={isRTL ? "left" : "right"}
                       className="p-2 flex flex-col gap-1 shadow-lg rounded-lg w-40 bg-[#0a0a0a]"
                     >
-                      {item.items.map((sub) => (
+                      {item.items?.map((sub) => ( // Added optional chaining
                         <Link
                           key={sub.title}
                           to={sub.url}
@@ -88,7 +107,7 @@ function NavMain({ items }) {
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
                       <SidebarMenuButton
-                        tooltip={item.title}
+                        tooltip={item.title} // Use string instead of null
                         className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! hover:text-white py-6"
                       >
                         {Icon && <Icon />}
@@ -106,7 +125,7 @@ function NavMain({ items }) {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <SidebarMenuSub>
-                        {item.items.map((subItem) => (
+                        {item.items?.map((subItem) => ( // Added optional chaining
                           <SidebarMenuSubItem
                             key={subItem.title}
                             className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! py-4"
@@ -134,7 +153,10 @@ function NavMain({ items }) {
               return (
                 <Tooltip key={item.title}>
                   <TooltipTrigger asChild>
-                    <SidebarMenuButton tooltip={null} className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! py-4">
+                    <SidebarMenuButton 
+                      tooltip={undefined} // Changed from null to undefined
+                      className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! py-4"
+                    >
                       {Icon && <Icon />}
                       <span className="text-base">{item.title}</span>
                     </SidebarMenuButton>
@@ -145,7 +167,7 @@ function NavMain({ items }) {
                     className="p-2 shadow-lg rounded-lg bg-[#0a0a0a]"
                   >
                     <Link
-                      to={item.url}
+                      to={item.url || "#"}
                       className="block rounded-md px-2 py-1 hover:bg-gray-800 text-sm transition-colors text-white"
                     >
                       {item.title}
@@ -159,11 +181,11 @@ function NavMain({ items }) {
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton
                   asChild
-                  tooltip={item.title}
+                  tooltip={item.title} // Use string instead of null
                   className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! hover:text-white py-4"
                 >
                   <Link
-                    to={item.url}
+                    to={item.url || "#"}
                     className="flex items-center gap-2 w-full py-6"
                   >
                     {Icon && <Icon />}
