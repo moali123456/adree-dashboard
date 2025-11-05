@@ -81,11 +81,14 @@ React Router – for page navigation and route handling
 
 Axios – for making API requests
 
+API from https://dummyjson.com/
+
 Tailwind CSS – for responsive and modern styling
 
 Redux Toolkit – for efficient global state management
 
 shadcn/ui – for accessible, customizable UI components
 
+demo url : https://adree-dashboard.mohamed-doghaim.com/
 demo video: 
 ```
