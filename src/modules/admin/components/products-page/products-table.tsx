@@ -80,7 +80,6 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
     },
   ];
 
-  // Rest of your component remains the same...
   const tableData = products.map((product) => ({
     ...product,
     id: product.id,
