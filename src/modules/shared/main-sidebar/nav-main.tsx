@@ -61,7 +61,7 @@ function NavMain({ items }: NavMainProps) {
                   <Tooltip key={item.title}>
                     <TooltipTrigger asChild>
                       <SidebarMenuButton
-                        tooltip={undefined} // Changed from null to undefined
+                        tooltip={undefined}
                         className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! hover:text-white"
                       >
                         {Icon && <Icon />}
@@ -82,7 +82,7 @@ function NavMain({ items }: NavMainProps) {
                       side={isRTL ? "left" : "right"}
                       className="p-2 flex flex-col gap-1 shadow-lg rounded-lg w-40 bg-[#0a0a0a]"
                     >
-                      {item.items?.map((sub) => ( // Added optional chaining
+                      {item.items?.map((sub) => (
                         <Link
                           key={sub.title}
                           to={sub.url}
@@ -107,7 +107,7 @@ function NavMain({ items }: NavMainProps) {
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
                       <SidebarMenuButton
-                        tooltip={item.title} // Use string instead of null
+                        tooltip={item.title}
                         className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! hover:text-white py-6"
                       >
                         {Icon && <Icon />}
@@ -125,7 +125,7 @@ function NavMain({ items }: NavMainProps) {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <SidebarMenuSub>
-                        {item.items?.map((subItem) => ( // Added optional chaining
+                        {item.items?.map((subItem) => (
                           <SidebarMenuSubItem
                             key={subItem.title}
                             className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! py-4"
@@ -154,7 +154,7 @@ function NavMain({ items }: NavMainProps) {
                 <Tooltip key={item.title}>
                   <TooltipTrigger asChild>
                     <SidebarMenuButton 
-                      tooltip={undefined} // Changed from null to undefined
+                      tooltip={undefined}
                       className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! py-4"
                     >
                       {Icon && <Icon />}
@@ -181,7 +181,7 @@ function NavMain({ items }: NavMainProps) {
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton
                   asChild
-                  tooltip={item.title} // Use string instead of null
+                  tooltip={item.title}
                   className="text-white hover:bg-[#2e0067]! focus:bg-[#2e0067]! active:bg-[#2e0067]! hover:text-white py-4"
                 >
                   <Link

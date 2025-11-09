@@ -38,9 +38,9 @@ function MainSidebar({ ...props }) {
         icon: Users,
         items: [
           {
-            title: t("admins"), // Use string instead of JSX
+            title: t("admins"), 
             url: "#",
-            icon: ShieldUser, // Add icon as separate property
+            icon: ShieldUser, 
           },
           {
             title: t("customers"),
@@ -79,6 +79,7 @@ function MainSidebar({ ...props }) {
                   alt="logo"
                   className={state === "collapsed" ? "w-auto h-auto" : ""}
                 />
+                velora-admin
               </div>
               <div className="grid text-left text-sm leading-tight">
                 <img
