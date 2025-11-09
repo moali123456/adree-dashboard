@@ -36,7 +36,7 @@ const TablePagination: React.FC<TablePaginationProps> = ({
     const maxVisiblePages = 5;
 
     let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
 
     // Adjust start page if we're near the end
     if (endPage - startPage + 1 < maxVisiblePages) {

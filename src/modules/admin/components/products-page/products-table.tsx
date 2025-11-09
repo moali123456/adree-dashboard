@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import DataTable from "../../../shared/data-table/data-table"; // KEEP THIS
-import { TableActions } from "../../../shared/table-actions/table-actions"; // KEEP THIS
+import DataTable from "../../../shared/data-table/data-table"; 
+import { TableActions } from "../../../shared/table-actions/table-actions"; 
 
 interface Product {
   id: number;
